@@ -4,7 +4,7 @@ package data;
 /**
  * Products
  */
-public abstract class Products {
+public abstract class Products implements Comparable<Products>{
 
     private Integer id;
     private String name;
@@ -38,6 +38,10 @@ public abstract class Products {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public int compareTo(Products prod) {
+        return price.compareTo(prod.getPrice());
     }
 
 

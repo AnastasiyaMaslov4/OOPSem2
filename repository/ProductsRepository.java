@@ -15,6 +15,10 @@ public class ProductsRepository {
         this.productsRepository = productsRepository;
     }
 
+    public ArrayList<Products> getArrList() {
+        return productsRepository;
+    }
+
     public Products getProductByName(String name) {
         for (Products el : productsRepository) {
             if (el.getName().equals(name)) return el;

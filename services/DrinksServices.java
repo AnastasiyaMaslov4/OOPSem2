@@ -38,4 +38,8 @@ public class DrinksServices {
         drinksRepository.showAll();
     }
 
+    public DrinksRepository getDrinksRepo() {
+        return drinksRepository;
+    }
+
 }

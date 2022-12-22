@@ -1,5 +1,8 @@
 package Controller;
 
+import java.util.TreeSet;
+
+import data.Products;
 import services.DrinksServices;
 import services.ProductServices;
 
@@ -35,6 +38,20 @@ public class AutomatsController {
 
     public String reserveProduct(String name) {
         return productServices.reserveProduct(name).toString();
+    }
+
+    public String bestProduct() {
+        TreeSet<Products> data = new TreeSet<Products>();
+        data.addAll(productServices.getProdRepo().getArrList());
+        String bestProd = "Лучший продукт в этом автомате: " +  data.last().getName();
+        return bestProd;
+    }
+
+    public String bestDrink() {
+        TreeSet<Products> data = new TreeSet<Products>();
+        data.addAll(drinksServices.getDrinksRepo().getArrList());
+        String bestProd = "Лучший продукт в этом автомате: " +  data.last().getName();
+        return bestProd;
     }
 
 }

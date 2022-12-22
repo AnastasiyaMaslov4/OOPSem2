@@ -12,6 +12,10 @@ public class ProductServices {
         this.productsRepository = productsRepository;
     }
 
+    public ProductsRepository getProdRepo() {
+        return productsRepository;
+    }
+
     public GetProductByNameResponse getProductByName(String name) {
         Products prod = productsRepository.getProductByName(name);
         if(prod == null) {

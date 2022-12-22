@@ -47,4 +47,8 @@ public class DrinksRepository {
         }
     }
 
+    public ArrayList<Products> getArrList() {
+        return drinksRepository;
+    }
+
 }
