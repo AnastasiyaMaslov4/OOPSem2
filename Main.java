@@ -27,7 +27,7 @@ public class Main {
 
         Products HotTea = new Tea(1, 100, "Hot black tea", 100, 300);
         Products GreenTea = new Tea(2, 120, "Green tea", 90, 300);
-        Products ColdTea = new Tea(3, 100, "Cold black tea", 30, 330);
+        Products ColdTea = new Tea(3, 200, "Cold black tea", 30, 330);
 
         drinksList.addAll(Arrays.asList(HotTea, GreenTea, ColdTea));
 
@@ -50,6 +50,9 @@ public class Main {
         System.out.println(controller.reserveProduct("Milk Chocolate"));
         System.out.println();
         System.out.println(controller.getProductByCode(664740647));
+        System.out.println();
+        System.out.println(controller.bestProduct());
+        System.out.println(controller.bestDrink());
 
     }
 }
